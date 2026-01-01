@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte de Vœux 2026 - Armstrong | ONE POWER Bénin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.3) 0%, transparent 25%),
+                radial-gradient(circle at 80% 70%, rgba(255, 105, 180, 0.3) 0%, transparent 25%),
+                radial-gradient(circle at 40% 80%, rgba(30, 144, 255, 0.3) 0%, transparent 25%),
+                linear-gradient(135deg, #0c2461, #1e3799, #4a69bd);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            animation: gradientShift 15s ease infinite alternate;
+        }
+
+        /* Arrière-plan ONE POWER */
+        .one-power-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://onepowerbenin.com/wp-content/uploads/2025/12/D052-1PWR-benin-presentation-generale.pptx-1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Texte ONE POWER en arrière-plan */
+        .one-power-text {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 180px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.07);
+            z-index: 0;
+            pointer-events: none;
+            text-align: center;
+            letter-spacing: 20px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 
+                0 1px 0 rgba(0, 0, 0, 0.3),
+                0 2px 0 rgba(0, 0, 0, 0.2),
+                0 3px 0 rgba(0, 0, 0, 0.1);
+            transform: rotate(-10deg);
+            animation: textFloat 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes textFloat {
+            0% {
+                transform: rotate(-10deg) translateY(0) scale(1);
+                opacity: 0.07;
+            }
+            50% {
+                transform: rotate(-8deg) translateY(-20px) scale(1.02);
+                opacity: 0.09;
+            }
+            100% {
+                transform: rotate(-12deg) translateY(20px) scale(0.98);
+                opacity: 0.05;
+            }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+
+        /* Effets de paillettes en arrière-plan */
+        .glitter-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .glitter {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            animation: glitterFall 5s linear infinite;
+        }
+
+        @keyframes glitterFall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            min-height: 100vh;
+            z-index: 2;
+        }
+
+        .screen {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+
+        .screen.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Écran de connexion */
+        .login-screen {
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .login-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            color: #0c2461;
+            backdrop-filter: blur(10px);
+            border: 2px solid gold;
+            position: relative;
+            z-index: 3;
+        }
+
+        .login-box h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #0c2461;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .login-box .subtitle {
+            font-size: 18px;
+            color: #e84118;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #0c2461;
+            font-size: 16px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #0c2461;
+            box-shadow: 0 0 0 3px rgba(12, 36, 97, 0.2);
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #0c2461, #e84118);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            width: 100%;
+            margin-top: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(232, 65, 24, 0.3);
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(232, 65, 24, 0.4);
+        }
+
+        .from-armstrong {
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(45deg, rgba(12, 36, 97, 0.9), rgba(232, 65, 24, 0.9));
+            border-radius: 15px;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            border: 2px solid gold;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-logo {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 3;
+        }
+
+        .logo-text {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(to right, gold, #ffd700, #f6e58d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .logo-subtext {
+            font-size: 14px;
+            color: #ddd;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+
+        /* Écran de l'enveloppe */
+        .fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .firework {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: linear-gradient(45deg, gold, #ff6b6b);
+            border-radius: 50%;
+            animation: firework 2s infinite;
+            box-shadow: 0 0 10px gold;
+        }
+
+        .firework:nth-child(1) {
+            top: 20%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .firework:nth-child(2) {
+            top: 40%;
+            left: 70%;
+            animation-delay: 0.5s;
+        }
+
+        .firework:nth-child(3) {
+            top: 70%;
+            left: 40%;
+            animation-delay: 1s;
+        }
+
+        .firework:nth-child(4) {
+            top: 30%;
+            left: 60%;
+            animation-delay: 1.5s;
+        }
+
+        .firework:nth-child(5) {
+            top: 60%;
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        @keyframes firework {
+            0% { transform: translateY(100vh); opacity: 1; }
+            50% { transform: translateY(0); opacity: 1; box-shadow: 0 0 20px gold; }
+            100% { transform: translateY(-100px); opacity: 0; }
+        }
+
+        .envelope-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            position: relative;
+            z-index: 2;
+        }
+
+        .envelope {
+            width: 320px;
+            height: 220px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            perspective: 1000px;
+        }
+
+        .envelope:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        .envelope .front {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #c23616, #e84118, #ff6b6b);
+            border-radius: 10px;
+            position: relative;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            overflow: hidden;
+            border: 3px solid gold;
+        }
+
+        .envelope .front:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.15) 10px,
+                rgba(255, 255, 255, 0.15) 20px
+            );
+        }
+
+        .stamp {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(45deg, gold, #ffd700);
+            padding: 8px 12px;
+            border-radius: 5px;
+            transform: rotate(10deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            border: 2px solid white;
+            font-weight: bold;
+        }
+
+        .stamp span:first-child {
+            font-weight: 800;
+            font-size: 18px;
+            color: #c23616;
+        }
+
+        .stamp span:last-child {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .to-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 25px;
+            border-radius: 15px;
+            width: 80%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 2px solid #0c2461;
+        }
+
+        .to-label i {
+            color: #e84118;
+            font-size: 28px;
+            margin-bottom: 10px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .to-label h2 {
+            color: #0c2461;
+            font-size: 28px;
+            margin-bottom: 5px;
+            font-weight: 800;
+        }
+
+        .to-label p {
+            color: #666;
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .instructions {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .instructions i {
+            color: gold;
+            margin-right: 10px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+
+        /* Écran de la carte ouverte */
+        .card-open {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+            margin: 20px auto;
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+            color: #333;
+            border: 3px solid gold;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .card-header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 20px;
+            border-bottom: 3px dashed #0c2461;
+        }
+
+        .card-header h1 {
+            color: #0c2461;
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card-header h1 i {
+            color: #e84118;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .year-sticker {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: linear-gradient(45deg, #e84118, #c23616, #ff6b6b);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(232, 65, 24, 0.5);
+            animation: pulse 2s infinite;
+            border: 3px solid gold;
+            z-index: 3;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+
+        .from-armstrong-badge {
+            background: linear-gradient(to right, #0c2461, #1e3799);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(12, 36, 97, 0.3);
+            border: 2px solid gold;
+        }
+
+        .name-badge {
+            background: linear-gradient(to right, #0c2461, #1e3799, #4a69bd);
+            color: white;
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(12, 36, 97, 0.4);
+            margin-top: 10px;
+            border: 2px solid gold;
+        }
+
+        .wishes-container {
+            background: rgba(12, 36, 97, 0.08);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 2px solid rgba(12, 36, 97, 0.1);
+        }
+
+        .wishes-title {
+            color: #0c2461;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+            justify-content: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e84118;
+        }
+
+        .wishes-title i {
+            color: #e84118;
+        }
+
+        .acrostic-wishes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .acrostic-letter {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(12, 36, 97, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .acrostic-letter:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .acrostic-letter:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #0c2461, #e84118);
+        }
+
+        .letter {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #0c2461, #1e3799);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 800;
+            margin-right: 15px;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(12, 36, 97, 0.3);
+            border: 2px solid gold;
+        }
+
+        .word {
+            font-weight: 700;
+            color: #0c2461;
+            font-size: 18px;
+        }
+
+        .meaning {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .special-message {
+            background: linear-gradient(45deg, rgba(255, 215, 0, 0.9), rgba(255, 255, 255, 0.9));
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 6px solid #e84118;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .special-message:before {
+            content: '💝';
+            position: absolute;
+            font-size: 60px;
+            opacity: 0.1;
+            top: 10px;
+            right: 10px;
+        }
+
+        .special-message p {
+            color: #0c2461;
+            font-size: 20px;
+            margin: 0;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .festive-stickers {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .sticker {
+            background: linear-gradient(45deg, #0c2461, #1e3799);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 2px solid gold;
+            animation: float 3s ease-in-out infinite;
+            min-width: 150px;
+            justify-content: center;
+        }
+
+        .sticker i {
+            color: gold;
+            font-size: 18px;
+        }
+
+        .sticker:nth-child(1) { animation-delay: 0s; }
+        .sticker:nth-child(2) { animation-delay: 0.5s; }
+        .sticker:nth-child(3) { animation-delay: 1s; }
+        .sticker:nth-child(4) { animation-delay: 1.5s; }
+
+        .card-footer {
+            border-top: 3px dashed #0c2461;
+            padding-top: 25px;
+            margin-top: 25px;
+        }
+
+        .family-message {
+            background: rgba(12, 36, 97, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #0c2461;
+            text-align: center;
+            border: 2px solid rgba(12, 36, 97, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .family-message:before {
+            content: '✨';
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.1;
+            top: 10px;
+            left: 10px;
+        }
+
+        .family-message strong {
+            color: #e84118;
+            font-size: 20px;
+        }
+
+        .family-message i {
+            color: #e84118;
+            margin-right: 10px;
+        }
+
+        .open-again {
+            display: inline-block;
+            margin-top: 20px;
+            background: linear-gradient(45deg, #0c2461, #1e3799);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            border: 2px solid gold;
+            box-shadow: 0 5px 15px rgba(12, 36, 97, 0.3);
+            text-align: center;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .open-again:hover {
+            background: linear-gradient(45deg, #e84118, #c23616);
+            transform: translateX(-50%) scale(1.08);
+            box-shadow: 0 8px 25px rgba(232, 65, 24, 0.4);
+        }
+
+        .open-again i {
+            margin-right: 8px;
+        }
+
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background: linear-gradient(45deg, #0c2461, #e84118);
+            border-radius: 50px;
+            padding: 12px 20px;
+            border: 2px solid gold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #music-btn {
+            background: transparent;
+            color: white;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        #music-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .music-control:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            transform: scale(1.05);
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .volume-slider {
+            width: 80px;
+            -webkit-appearance: none;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+            outline: none;
+        }
+
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: gold;
+            cursor: pointer;
+            border: 2px solid white;
+        }
+
+        .error-message {
+            color: #e84118;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+            display: none;
+            font-weight: 600;
+        }
+
+        .signature {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 28px;
+            color: #0c2461;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .envelope {
+                width: 280px;
+                height: 190px;
+            }
+            
+            .card-open {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .card-header h1 {
+                font-size: 24px;
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .acrostic-wishes {
+                grid-template-columns: 1fr;
+            }
+            
+            .festive-stickers {
+                gap: 15px;
+            }
+            
+            .sticker {
+                font-size: 14px;
+                padding: 10px 20px;
+                min-width: 130px;
+            }
+            
+            .login-box {
+                padding: 30px 20px;
+                margin: 0 10px;
+            }
+            
+            .name-badge {
+                font-size: 20px;
+                padding: 10px 25px;
+            }
+            
+            .one-power-text {
+                font-size: 80px;
+                letter-spacing: 10px;
+            }
+            
+            .music-control {
+                bottom: 10px;
+                right: 10px;
+                padding: 10px 15px;
+                font-size: 14px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            
+            .volume-control {
+                width: 100%;
+                justify-content: space-between;
+            }
+            
+            .volume-slider {
+                width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Arrière-plan ONE POWER -->
+    <div class="one-power-background"></div>
+    <div class="one-power-text">ONE POWER</div>
+    
+    <!-- Effets de paillettes en arrière-plan -->
+    <div class="glitter-bg" id="glitter-bg"></div>
+    
+    <div class="container">
+        <!-- Écran 1: Connexion avec prénom -->
+        <div id="login-screen" class="screen active">
+            <div class="login-screen">
+                <div class="login-box">
+                    <h1>🎉 BONNE ANNÉE 2026 🎉</h1>
+                    <p class="subtitle">De la part d'Armstrong à la famille ONE POWER</p>
+                    
+                    <div class="input-group">
+                        <label for="member-name"><i class="fas fa-user"></i> Entre ton prénom pour découvrir tes vœux personnalisés</label>
+                        <input type="text" id="member-name-input" placeholder="Écrivez vos prénoms" autocomplete="off">
+                    </div>
+                    
+                    <button class="btn" onclick="login()">
+                        <i class="fas fa-gift"></i> OUVRE TES VŒUX
+                    </button>
+                    
+                    <div id="error-message" class="error-message">
+                        <i class="fas fa-exclamation-circle"></i> Entre ton prénom pour continuer
+                    </div>
+                    
+                    <div class="from-armstrong">
+                        <p><i class="fas fa-heart"></i> <strong>Message d'Armstrong :</strong><br>
+                        À toute la famille 1PW, que 2026 soit l'année de notre plus grand succès !</p>
+                    </div>
+                </div>
+                
+                <div class="team-logo">
+                    <div class="logo-text">ONE POWER</div>
+                    <div class="logo-subtext">Famille · Unité · Succès · 2026</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Écran 2: L'enveloppe fermée -->
+        <div id="envelope-screen" class="screen">
+            <div class="fireworks">
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+                <div class="firework"></div>
+            </div>
+            
+            <div class="envelope-container">
+                <div class="envelope" id="envelope">
+                    <div class="front">
+                        <div class="stamp">
+                            <span>1PW</span>
+                            <span>2026</span>
+                        </div>
+                        <div class="to-label">
+                            <i class="fas fa-heart"></i>
+                            <h2 id="member-name-display">Cher Membre</h2>
+                            <p>de la part d'Armstrong</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="instructions">
+                    <p><i class="fas fa-hand-pointer"></i> Clique sur l'enveloppe pour ouvrir tes vœux !</p>
+                </div>
+            </div>
+            
+            <div class="team-logo">
+                <div class="logo-text">ONE POWER</div>
+                <div class="logo-subtext">Famille · Unité · Succès · 2026</div>
+            </div>
+        </div>
+        
+        <!-- Écran 3: La carte ouverte -->
+        <div id="card-screen" class="screen">
+            <div class="card-open">
+                <div class="card-header">
+                    <h1><i class="fas fa-star"></i> BONNE ANNÉE 2026 <i class="fas fa-star"></i></h1>
+                    <div class="year-sticker">2026</div>
+                    <div class="from-armstrong-badge">
+                        <i class="fas fa-user-tie"></i> Vœux d'Armstrong
+                    </div>
+                </div>
+                
+                <div class="card-content">
+                    <div class="name-badge">
+                        <h2 id="member-full-name">Membre 1PW</h2>
+                    </div>
+                    
+                    <div class="wishes-container">
+                        <div class="wishes-title">
+                            <i class="fas fa-gift"></i> TES VŒUX PERSONNALISÉS POUR 2026
+                        </div>
+                        
+                        <div class="acrostic-wishes" id="acrostic-container">
+                            <!-- Les vœux acrostiches seront générés ici -->
+                        </div>
+                        
+                        <div class="special-message">
+                            <p id="special-wish">Que cette nouvelle année 2026 amplifie ton POWER et t'apporte autant de joie que tu en donnes à notre équipe !</p>
+                        </div>
+                    </div>
+                    
+                    <div class="festive-stickers">
+                        <div class="sticker"><i class="fas fa-champagne-glasses"></i> Fête</div>
+                        <div class="sticker"><i class="fas fa-trophy"></i> Succès</div>
+                        <div class="sticker"><i class="fas fa-heart"></i> Amour</div>
+                        <div class="sticker"><i class="fas fa-bolt"></i> Énergie</div>
+                    </div>
+                    
+                    <div class="signature">Avec toute mon affection,<br>Armstrong</div>
+                </div>
+                
+                <div class="card-footer">
+                    <p class="family-message">
+                        <i class="fas fa-users"></i> <strong>À toute la famille ONE POWER (1PW) :</strong><br><br>
+                        Que 2026 soit l'année de notre expansion, de nos succès partagés et de notre unité indestructible. 
+                        La puissance est dans notre union ! Ensemble, nous atteindrons des sommets encore inexplorés.<br><br>
+                        Merci pour votre engagement, votre dévouement et votre énergie positive. Soyons plus forts, plus unis et plus déterminés que jamais !
+                    </p>
+                    
+                    <div class="open-again" onclick="resetToLogin()">
+                        <i class="fas fa-redo"></i> Voir les vœux d'un autre membre
+                    </div>
+                </div>
+            </div>
+            
+            <div class="music-control">
+                <button id="music-btn" onclick="toggleMusic()">
+                    <i class="fas fa-music"></i> <span id="music-text">Activer la musique</span>
+                </button>
+                <div class="volume-control">
+                    <i class="fas fa-volume-up" style="color: gold;"></i>
+                    <input type="range" min="0" max="100" value="100" class="volume-slider" id="volume-slider">
+                    <span id="volume-percent" style="font-size: 12px; min-width: 30px;">100%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Audio pour l'ambiance - Son Happy New Year 2026 de Slick Stomp -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="https://assets.mixkit.co/music/preview/mixkit-happy-new-year-983.mp3" type="audio/mpeg">
+        <!-- Alternative si le premier lien ne fonctionne pas -->
+        <source src="https://assets.mixkit.co/music/preview/mixkit-happy-new-year-sound-2956.mp3" type="audio/mpeg">
+        Votre navigateur ne supporte pas l'élément audio.
+    </audio>
+    
+    <script>
+        // Base de données des vœux acrostiches par lettre
+        const wishesByLetter = {
+            "A": ["Amour", "Ambition", "Abondance", "Accomplissement", "Amitié"],
+            "B": ["Bénédiction", "Bonne santé", "Bravo", "Brillance", "Bonne chance"],
+            "C": ["Courage", "Croissance", "Créativité", "Confiance", "Chance"],
+            "D": ["Détermination", "Dévouement", "Dynamisme", "Découverte", "Dignité"],
+            "E": ["Énergie", "Épanouissement", "Excellence", "Enthousiasme", "Équilibre"],
+            "F": ["Félicité", "Force", "Fierté", "Fidélité", "Foi"],
+            "G": ["Gloire à Dieu", "Grandeur", "Générosité", "Gratitude", "Gaieté"],
+            "H": ["Harmonie", "Honneur", "Humilité", "Habilité", "Honneur"],
+            "I": ["Inspiration", "Innovation", "Intégrité", "Intelligence", "Intuition"],
+            "J": ["Joie", "Jubilation", "Justice", "Jeunesse d'esprit", "Jovialité"],
+            "K": ["Karma positif", "Kiff total", "Know-how", "Kinship"],
+            "L": ["Lumière", "Leadership", "Loyauté", "Liberté", "Lucidité"],
+            "M": ["Motivation", "Maturité", "Mérite", "Miracle", "Maîtrise"],
+            "N": ["Nouveaux départs", "Noblesse", "Nectar du succès", "Nectar de vie", "Nouveauté"],
+            "O": ["Opportunités", "Optimisme", "Ouverture", "Originalité", "Opulence"],
+            "P": ["Puissance", "Prospérité", "Pureté", "Passion", "Persévérance"],
+            "Q": ["Qualité", "Quête du bonheur", "Quintessence", "Quiétude"],
+            "R": ["Réussite", "Rayonnement", "Résilience", "Respect", "Rigueur"],
+            "S": ["Succès", "Santé", "Sérénité", "Solidarité", "Sagesse"],
+            "T": ["Triomphe", "Ténacité", "Tranquillité", "Talent", "Travail"],
+            "U": ["Union", "Unicité", "Unité", "Universalité", "Utilité"],
+            "V": ["Victoire", "Vitalité", "Vérité", "Vision", "Vaillance"],
+            "W": ["Winning attitude", "Waalé (travail)", "Wealth", "Warmth"],
+            "X": ["X-factor", "Xénialité (hospitalité)", "Xcellence", "Xtraordinaire"],
+            "Y": ["Yields (rendements)", "Yin-Yang équilibré", "Yeux vers l'avenir", "Youthful spirit"],
+            "Z": ["Zèle", "Zénith", "Zéro problème", "Zest for life"]
+        };
+
+        // Messages spéciaux d'Armstrong par prénom
+        const specialMessages = {
+            "armstrong": "Que cette année 2026 soit celle où tu réalises tes plus grands rêves ! Continue d'être le leader inspirant que tu es.",
+            "alain": "En 2026, que chaque jour soit une nouvelle victoire pour toi ! Ton dévouement à 1PW est une inspiration pour tous.",
+            "mariam": "Que 2026 t'apporte autant de lumière que tu en diffuses autour de toi ! Merci pour ta positivité contagieuse.",
+            "eric": "Que ton leadership nous guide vers des sommets encore plus élevés en 2026 ! Ta vision est notre boussole.",
+            "parfait": "En 2026, que chaque projet que tu touches se transforme en succès retentissant ! Ton expertise est précieuse.",
+            "aline": "Que cette nouvelle année soit douce et radieuse comme toi ! Merci pour ta contribution essentielle à 1PW.",
+            "joseph": "En 2026, que la force soit avec toi dans tous tes combats ! Ton courage inspire toute l'équipe.",
+            "esther": "Que 2026 t'apporte joie et épanouissement dans tous les domaines ! Ta présence illumine notre équipe.",
+            "default": "Que cette nouvelle année 2026 amplifie ton POWER et t'apporte autant de joie que tu en donnes à notre équipe ! Continue d'être cette étincelle qui illumine ONE POWER."
+        };
+
+        // Stocker le nom du membre courant
+        let currentMemberName = "";
+
+        // Fonction pour créer des paillettes
+        function createGlitter() {
+            const glitterBg = document.getElementById('glitter-bg');
+            const glitterCount = 50;
+            
+            for (let i = 0; i < glitterCount; i++) {
+                const glitter = document.createElement('div');
+                glitter.className = 'glitter';
+                glitter.style.left = Math.random() * 100 + 'vw';
+                glitter.style.animationDuration = (3 + Math.random() * 4) + 's';
+                glitter.style.animationDelay = Math.random() * 5 + 's';
+                glitter.style.opacity = 0.3 + Math.random() * 0.7;
+                glitter.style.width = glitter.style.height = (2 + Math.random() * 4) + 'px';
+                glitter.style.background = `radial-gradient(circle, ${Math.random() > 0.5 ? 'gold' : '#ff6b6b'} 30%, transparent 70%)`;
+                glitterBg.appendChild(glitter);
+            }
+        }
+
+        // Fonction de connexion
+        function login() {
+            const nameInput = document.getElementById('member-name-input');
+            const errorMessage = document.getElementById('error-message');
+            const memberName = nameInput.value.trim();
+            
+            if (!memberName) {
+                errorMessage.style.display = 'block';
+                nameInput.focus();
+                return;
+            }
+            
+            errorMessage.style.display = 'none';
+            currentMemberName = memberName;
+            
+            // Mettre à jour le nom sur l'enveloppe
+            document.getElementById('member-name-display').textContent = memberName;
+            document.getElementById('member-full-name').textContent = memberName;
+            
+            // Changer d'écran
+            switchScreen('login-screen', 'envelope-screen');
+            
+            // Effet sonore
+            const clickSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3');
+            clickSound.volume = 0.5;
+            clickSound.play();
+        }
+
+        // Générer les vœux acrostiches
+        function generateAcrosticWishes(name) {
+            const nameUpper = name.toUpperCase();
+            let html = '';
+            
+            for(let i = 0; i < nameUpper.length; i++) {
+                const letter = nameUpper[i];
+                const wishes = wishesByLetter[letter] || ["Bonheur", "Succès", "Amour", "Santé", "Joie"];
+                const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+                
+                html += `
+                    <div class="acrostic-letter">
+                        <span class="letter">${letter}</span>
+                        <span class="word">${randomWish}</span>
+                        <div class="meaning">Pour une année 2026 remplie de ${randomWish.toLowerCase()}</div>
+                    </div>
+                `;
+            }
+            
+            return html;
+        }
+
+        // Changer d'écran
+        function switchScreen(fromId, toId) {
+            const fromScreen = document.getElementById(fromId);
+            const toScreen = document.getElementById(toId);
+            
+            fromScreen.classList.remove('active');
+            setTimeout(() => {
+                toScreen.classList.add('active');
+            }, 300);
+        }
+
+        // Réinitialiser pour un autre membre
+        function resetToLogin() {
+            // Réinitialiser le formulaire
+            document.getElementById('member-name-input').value = '';
+            document.getElementById('error-message').style.display = 'none';
+            
+            switchScreen('card-screen', 'login-screen');
+            
+            // Effet sonore
+            const resetSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-plastic-bubble-click-1124.mp3');
+            resetSound.volume = 0.5;
+            resetSound.play();
+        }
+
+        // Fonction améliorée pour contrôler la musique
+        function toggleMusic() {
+            const music = document.getElementById('bg-music');
+            const btn = document.getElementById('music-btn');
+            const musicText = document.getElementById('music-text');
+            
+            if(music.paused) {
+                // Jouer avec une promesse pour gérer les erreurs
+                music.play().then(() => {
+                    musicText.textContent = 'Musique activée';
+                    btn.innerHTML = '<i class="fas fa-volume-up"></i> <span id="music-text">Musique activée</span>';
+                    btn.parentElement.style.background = 'linear-gradient(45deg, #4a69bd, #1e3799)';
+                    showMusicNotification('🎵 Happy New Year 2026 activé !');
+                }).catch(error => {
+                    console.error("Erreur de lecture audio:", error);
+                    showMusicNotification('❌ Problème avec la musique. Autorisez l\'audio dans votre navigateur.');
+                    
+                    // Essayer avec une source alternative
+                    music.src = "https://assets.mixkit.co/music/preview/mixkit-happy-new-year-sound-2956.mp3";
+                    music.load();
+                    
+                    // Réessayer après 1 seconde
+                    setTimeout(() => {
+                        music.play().then(() => {
+                            musicText.textContent = 'Musique activée';
+                            btn.innerHTML = '<i class="fas fa-volume-up"></i> <span id="music-text">Musique activée</span>';
+                        });
+                    }, 1000);
+                });
+            } else {
+                music.pause();
+                musicText.textContent = 'Activer la musique';
+                btn.innerHTML = '<i class="fas fa-music"></i> <span id="music-text">Activer la musique</span>';
+                btn.parentElement.style.background = 'linear-gradient(45deg, #0c2461, #e84118)';
+            }
+        }
+
+        // Fonction pour gérer le volume
+        function updateVolume() {
+            const music = document.getElementById('bg-music');
+            const volumeSlider = document.getElementById('volume-slider');
+            const volumePercent = document.getElementById('volume-percent');
+            
+            // Convertir la valeur du slider (0-100) en volume (0.0-1.0)
+            const volumeValue = volumeSlider.value / 100;
+            music.volume = volumeValue;
+            volumePercent.textContent = volumeSlider.value + '%';
+            
+            // Sauvegarder le volume dans le localStorage
+            localStorage.setItem('musicVolume', volumeSlider.value);
+        }
+
+        // Fonction pour afficher une notification musicale
+        function showMusicNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.left = '50%';
+            notification.style.transform = 'translateX(-50%)';
+            notification.style.background = 'linear-gradient(45deg, #0c2461, #e84118)';
+            notification.style.color = 'white';
+            notification.style.padding = '10px 20px';
+            notification.style.borderRadius = '50px';
+            notification.style.zIndex = '1000';
+            notification.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
+            notification.style.border = '2px solid gold';
+            notification.innerHTML = `<i class="fas fa-music"></i> ${message}`;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 2000);
+        }
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Créer les paillettes
+            createGlitter();
+            
+            // Initialiser la musique avec volume à 100%
+            const music = document.getElementById('bg-music');
+            const volumeSlider = document.getElementById('volume-slider');
+            
+            // Récupérer le volume sauvegardé ou utiliser 100%
+            const savedVolume = localStorage.getItem('musicVolume');
+            if (savedVolume) {
+                volumeSlider.value = savedVolume;
+                music.volume = savedVolume / 100;
+                document.getElementById('volume-percent').textContent = savedVolume + '%';
+            } else {
+                music.volume = 1.0; // Volume à 100%
+                volumeSlider.value = 100;
+                document.getElementById('volume-percent').textContent = '100%';
+            }
+            
+            // Configurer l'événement pour le slider de volume
+            volumeSlider.addEventListener('input', updateVolume);
+            
+            // Permettre l'appui sur Entrée pour se connecter
+            document.getElementById('member-name-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    login();
+                }
+            });
+            
+            // Gestion du clic sur l'enveloppe
+            document.getElementById('envelope').addEventListener('click', function() {
+                // Générer les vœux acrostiches
+                const memberName = currentMemberName;
+                const acrosticHTML = generateAcrosticWishes(memberName);
+                document.getElementById('acrostic-container').innerHTML = acrosticHTML;
+                
+                // Mettre à jour le message spécial
+                const nameKey = memberName.toLowerCase();
+                const specialMessage = specialMessages[nameKey] || specialMessages["default"];
+                document.getElementById('special-wish').textContent = specialMessage;
+                
+                // Animation d'ouverture de l'enveloppe
+                this.style.transform = 'rotateX(180deg)';
+                setTimeout(() => {
+                    switchScreen('envelope-screen', 'card-screen');
+                    // Jouer un son d'enveloppe qui s'ouvre
+                    const openSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-unlock-game-notification-253.mp3');
+                    openSound.volume = 0.5;
+                    openSound.play();
+                    
+                    // Suggestion discrète d'activer la musique
+                    setTimeout(() => {
+                        if (music.paused) {
+                            showMusicNotification('🎶 Clique sur le bouton musique pour activer Happy New Year 2026 !');
+                        }
+                    }, 1000);
+                }, 500);
+            });
+            
+            // Ajouter des confettis au clic sur la carte
+            document.querySelector('.card-open').addEventListener('click', function(e) {
+                if(e.target.classList.contains('card-open')) {
+                    createConfetti(e.clientX, e.clientY);
+                }
+            });
+            
+            // Fonction pour créer des confettis
+            function createConfetti(x, y) {
+                for(let i = 0; i < 15; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti-piece';
+                    confetti.style.position = 'fixed';
+                    confetti.style.width = '12px';
+                    confetti.style.height = '12px';
+                    confetti.style.borderRadius = '50%';
+                    confetti.style.zIndex = '1000';
+                    confetti.style.pointerEvents = 'none';
+                    confetti.style.left = x + 'px';
+                    confetti.style.top = y + 'px';
+                    const colors = ['#FFD700', '#FF6B6B', '#4ECDC4', '#45B7D1', '#0c2461', '#e84118'];
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.boxShadow = '0 0 8px currentColor';
+                    document.body.appendChild(confetti);
+                    
+                    const angle = Math.random() * Math.PI * 2;
+                    const velocity = 3 + Math.random() * 3;
+                    const vx = Math.cos(angle) * velocity;
+                    const vy = Math.sin(angle) * velocity;
+                    
+                    let posX = x;
+                    let posY = y;
+                    
+                    const animate = () => {
+                        posX += vx;
+                        posY += vy;
+                        vy += 0.1; // gravité
+                        
+                        confetti.style.left = posX + 'px';
+                        confetti.style.top = posY + 'px';
+                        confetti.style.opacity = 1 - (posY - y) / 300;
+                        
+                        if(posY < window.innerHeight + 100) {
+                            requestAnimationFrame(animate);
+                        } else {
+                            confetti.remove();
+                        }
+                    };
+                    
+                    animate();
+                }
+            }
+            
+            // Ajouter un effet de paillettes au survol des vœux
+            document.addEventListener('mouseover', function(e) {
+                if (e.target.closest('.acrostic-letter')) {
+                    const letter = e.target.closest('.acrostic-letter');
+                    createConfetti(
+                        letter.offsetLeft + letter.offsetWidth/2,
+                        letter.offsetTop + letter.offsetHeight/2
+                    );
+                }
+            });
+            
+            // Démarrer automatiquement la musique si l'utilisateur a déjà interagi
+            document.addEventListener('click', function initAudio() {
+                const music = document.getElementById('bg-music');
+                // Essayer de jouer la musique automatiquement après interaction
+                if (music.paused) {
+                    music.play().then(() => {
+                        document.getElementById('music-text').textContent = 'Musique activée';
+                        document.getElementById('music-btn').innerHTML = '<i class="fas fa-volume-up"></i> <span id="music-text">Musique activée</span>';
+                        document.querySelector('.music-control').style.background = 'linear-gradient(45deg, #4a69bd, #1e3799)';
+                    }).catch(e => {
+                        console.log("L'utilisateur doit activer manuellement la musique");
+                    });
+                }
+                // Retirer cet écouteur après la première interaction
+                document.removeEventListener('click', initAudio);
+            }, { once: true });
+        });
+    </script>
+</body>
+</html>
